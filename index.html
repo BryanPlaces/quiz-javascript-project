@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Project</title>
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/questions.css">
+    <link rel="stylesheet" href="assets/styles/timer-discount.css">
+    <link rel="stylesheet" href="assets/styles/buttons.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <img src="assets/images/siroko_logo.png" height="35px" alt="Siroko logo">
+      <span class="siroko-text">Siroko</span>
+    </header>
+    <main class="quiz-container">
+      <div id="quiz-step" class="quiz-step"></div>
+      
+      <h1 id="quiz-title">¡Vamos allá!</h1>
+      <p id="quiz-description">
+        Has llegado hasta el test de Siroko. Responde las siguientes preguntas y genera tu código premiado a medida.
+      </p>
+
+      <div id="questions-container" class="questions-container">
+        <div id="question-description" class="question-description"></div>
+        <ul id="options" class="options"></ul>
+        <button id="next-btn" class="next-btn" disabled>
+          Siguiente <img src="assets/images/right_arrow.png" alt="Right arrow">
+        </button>
+      </div>
+        
+      <div id="last-step-container" style="display: none;">
+        <div class="code-generator-wrapper">
+          <div class="quiz-question">lo prometido es deuda</div>
+          <div class="code-container">
+            <span id="generated-code"></span>
+            <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
+          </div>
+          <div>
+            Introduce este código en tu próxima compra para conseguir tu premio.¡Disponible durante 20 minutos!
+          </div>
+          <div class="timer-wrapper" style="display: block;">
+            <div id="timer-container" class="timer">
+              <img src="assets/images/icon_clock.png" alt="Icon clock">
+              <span id="timer">20:00</span>
+            </div>
+          </div>
+
+          <div id="timer-expired-container" class="timer-wrapper" style="display: none;">
+            <div class="timer expired-code">
+              <img src="assets/images/icon_clock.png" alt="Icon clock">
+              <span>Código caducado.</span>
+              <a href="">Reiniciar.</a>
+            </div>
+          </div>
+
+          <a class="next-btn" href="https://www.siroko.com/">Ir a siroko.com <img src="assets/images/right_arrow.png" alt="Right arrow"></a>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <p>2016-2021 Siroko Solutions S.L.</p>
+      <p>Todos los derechos reservados. <a href="#">Ver bases</a>.</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+  <div id="customAlert">¡Código copiado correctamente!</div>
+</html>

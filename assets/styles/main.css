@@ -1,0 +1,115 @@
+:root {
+  --white-color: #FFF;
+  --gray-color-light: #BBBBBB;
+  --cyan-color-light: #5DC2BD;
+  --cyan-color-light-2: #008e76;
+  --cyan-color-light-3: #00bfa5;
+  --cyan-color-dark: #2C5E5B;
+  --cyan-color-dark-secondary: #01483c;
+  --red-color: #C51414;
+  --crimson-color: #C92F58;
+  --purple-color-light: #FFFFFF17;
+  --purple-color-dark: #311429;
+  --purple-color-dark-seconday: #2C0C23;
+  --yellow-color-light: #EFE5C3;
+  --icon-radio-size: 20px;
+}
+
+@font-face {
+  font-family: 'LiberatorSiroko';
+  src: url('../fonts/LiberatorSIROKO-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Inconsolata', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+.siroko-text {
+  display: none;
+  font-size: 2.2rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+header {
+  padding: 25px 25px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-height: 35px;
+}
+
+.quiz-container {
+  padding: 25px;
+  flex: 1;
+}
+
+.quiz-step {
+  font-family: 'Inter', sans-serif;
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 3px;
+  background-color: var(--cyan-color-light);
+  font-weight: 700;
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--cyan-color-dark);
+  text-transform: uppercase;
+}
+.quiz-container h1 {
+  font-family: 'LiberatorSiroko', sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.quiz-container p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #000000;
+  padding: 25px;
+  font-size: 0.8em;
+  color: var(--gray-color-light);
+}
+footer a {
+  color: var(--white-color);
+}
+
+#customAlert {
+  display: none;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: var(--cyan-color-light);
+  color: var(--cyan-color-dark);
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 834px) {
+  .siroko-text {
+    display: inline;
+  }
+}

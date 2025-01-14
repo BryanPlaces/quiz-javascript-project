@@ -1,0 +1,40 @@
+.timer {
+  background-color: var(--purple-color-dark-seconday);
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.code-generator-wrapper {
+  background-color: var(--purple-color-dark);
+  padding: 20px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.code-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  background: linear-gradient(270deg, #FFFFFF 0%, #BDBDBD 100%);
+  font-weight: 700;
+  font-size: 25px;
+  border-radius: 2px;
+}
+
+.expired-code {
+  font-size: 1rem;
+  background-color: var(--red-color);
+  gap: 10px
+}
+
+.expired-code a {
+  text-decoration: underline;
+  color: inherit;
+}
